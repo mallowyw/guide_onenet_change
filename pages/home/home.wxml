@@ -1,0 +1,19 @@
+<view >
+    <text class="title">现在正在 {{status_guide}}</text>
+    <button bind:tap="queryButtonHandler">
+        查询当前状态
+    </button>
+    <text class="item" wx:for="{{items}}">
+        {{index}}、 {{item}}
+    </text>
+    <input placeholder="输入新增事项" bind:input="inputHandler" />
+    <button bind:tap="buttonHandler">确定</button>
+    <navigator url="../image_page/image_page">前往图片页</navigator>
+    <button bind:tap="pageJumpHandler">前往第二页</button>
+<!--     <button class="weui-btn weui-btn_primary weui-btn_loading">
+        <i class="weui-loading"></i>正在加载
+    </button>
+    <button class="weui-btn weui-btn_primary weui-btn_disabled">
+        禁止点击
+    </button> -->
+</view>
