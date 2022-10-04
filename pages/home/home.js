@@ -3,13 +3,11 @@ const API_URL = 'https://api.heclouds.com/devices/982044910/'
 const API_KEY = 'RMbyJ3/B1OUbyrw/un/f4ZiuaOy5LK0Op3naT7vfK4g='
 const Key_Token = 'version=2018-10-31&res=products%2F538002&et=1667551744&method=md5&sign=P0m%2BWOCKNVXKSE0lzo3%2FqQ%3D%3D'
 //当前token到期时间为11.4下午四点多
-// gYTmesefwkAWC8JEgZC31=yKJ2o= master_apikey
+//master_apikey: gYTmesefwkAWC8JEgZC31=yKJ2o=
 const Datastream_ids = 'status_guide,coordinates'
 Page({
     data: {
         now: app.globalData.now,
-        items: ['事项A', '事项B', '事项C'],    //WXML数组循环测试
-        inputValue: '',
         res_data: { "state": "null" },
         state: {
             status_guide: '待机',
@@ -17,6 +15,7 @@ Page({
             current_coordinates: { "latitude": 0, "longitude": 0 }
         }
     },
+    //查询按钮处理
     queryButtonHandler(event) {
         const that = this;
         wx.showModal({
@@ -38,6 +37,7 @@ Page({
             }
         });
     },
+    //批量查询数据流并更新
     get_Datastreams(datastream_ids) {
         const that = this;
         const get_apiurl = API_URL + 'datastreams?datastream_ids=' + datastream_ids;
@@ -91,18 +91,18 @@ Page({
             }
         });
     },
-    inputHandler(event) {
-        this.setData({
-            inputValue: event.detail.value || ''
-        });
-    },
-    buttonHandler(event) {
-        const newItem = this.data.inputValue.trim();
-        if (!newItem) return;
-        const itemArr = [...this.data.items, newItem];
-        wx.setStorageSync('items', itemArr);
-        this.setData({ items: itemArr });
-    },
+    // inputHandler(event) {
+    //     this.setData({
+    //         inputValue: event.detail.value || ''
+    //     });
+    // },
+    // buttonHandler(event) {
+    //     const newItem = this.data.inputValue.trim();
+    //     if (!newItem) return;
+    //     const itemArr = [...this.data.items, newItem];
+    //     wx.setStorageSync('items', itemArr);
+    //     this.setData({ items: itemArr });
+    // },
     onload() {
         const itemArr = wx.getStorageSync('items') || [];
         this.setData({ items: itemArr });

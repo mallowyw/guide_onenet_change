@@ -7,17 +7,8 @@
         纬度: {{state.current_coordinates.latitude}}
         经度: {{state.current_coordinates.longitude}}
     </text>
-    <!-- <text class="item" wx:for="{{items}}">
-        {{index}}、 {{item}}
-    </text>
-    <input placeholder="输入新增事项" bind:input="inputHandler" />
-    <button bind:tap="buttonHandler">确定</button> -->
+
     <navigator url="../map_page/map_page">前往地图页</navigator>
     <button bind:tap="pageJumpHandler">前往第二页</button>
-    <!-- <button class="weui-btn weui-btn_primary weui-btn_loading">
-        <i class="weui-loading"></i>正在加载
-    </button>
-    <button class="weui-btn weui-btn_primary weui-btn_disabled">
-        禁止点击
-    </button> -->
+
 </view>
