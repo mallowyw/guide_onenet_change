@@ -4,6 +4,7 @@ const API_KEY = 'RMbyJ3/B1OUbyrw/un/f4ZiuaOy5LK0Op3naT7vfK4g='
 const Key_Token = 'version=2018-10-31&res=products%2F538002&et=1667551744&method=md5&sign=P0m%2BWOCKNVXKSE0lzo3%2FqQ%3D%3D'
 //当前token到期时间为11.4下午四点多
 //master_apikey: gYTmesefwkAWC8JEgZC31=yKJ2o=
+
 const Datastream_ids = 'status_guide,coordinates'
 Page({
     data: {
@@ -12,7 +13,7 @@ Page({
         state: {
             status_guide: '待机',
             //status_health: ['','',''],
-            current_coordinates: { "latitude": 0, "longitude": 0 }
+            current_coordinates: { "latitude": 39.916527, "longitude": 116.397128 }//为了初始化页面时有地图显示而设置
         }
     },
     //查询按钮处理

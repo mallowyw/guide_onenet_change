@@ -1,0 +1,13 @@
+<!--pages/about/about/about.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">关于我们</view>
+</cu-custom>
+
+<scroll-view scroll-y="true" lower-threshold="120" style="height: 92vh;" bindscrolltolower="AppendAppointment">
+    <view class="margin-top">
+        <view class="tit">
+            关于我们
+        </view>
+    </view>
+</scroll-view>

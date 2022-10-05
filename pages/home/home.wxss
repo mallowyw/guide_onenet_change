@@ -1,7 +1,8 @@
-page {
-    height: 100%;
-    width: 750rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.state{
+  text-align: center;
+  margin-top: 3%;
+}
+
+.state button{
+  margin-top: 2%;
 }

@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+      "basics": "/pages/health/health",
+      "component": "/pages/map_page/map_page",
+      "plugin": "/pages/home/home",
+      "about": "/pages/about/home/home"
+    }
+  }

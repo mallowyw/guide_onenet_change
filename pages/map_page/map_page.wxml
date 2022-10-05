@@ -1,3 +1,7 @@
-<view >
-    
-</view>
+<!-- 导航页面 -->
+<cu-custom bgColor="bg-gradual-blue">
+    <view slot="content">导航</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+  <text>子女输入目的地</text>
+</scroll-view>

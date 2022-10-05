@@ -1,14 +1,29 @@
-<view >
-    <text class="title">现在正在 {{state.status_guide}}</text>
-    <button bind:tap="queryButtonHandler">
-        查询当前状态
-    </button>
-    <text class="coordinates">
-        纬度: {{state.current_coordinates.latitude}}
-        经度: {{state.current_coordinates.longitude}}
-    </text>
 
-    <navigator url="../map_page/map_page">前往地图页</navigator>
-    <button bind:tap="pageJumpHandler">前往第二页</button>
+<cu-custom bgColor="bg-gradual-blue">
+    <view slot="content">定位</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+  <view style="width: 100%; height: 60%;">
+    <map id="map" longitude="{{state.current_coordinates.longitude}}" latitude="{{state.current_coordinates.latitude}}" scale="14" 
+    markers="{{markers}}"  style="width: 100%; height: 100%;"></map>
+  </view>
 
-</view>
+  <view class="state">
+    <view>
+        <text class="title">现在正在 {{state.status_guide}}</text>
+    </view>
+        <button bind:tap="queryButtonHandler">
+            更新当前定位
+        </button>
+        <!-- <text class="coordinates">
+            纬度: {{state.current_coordinates.latitude}}
+            经度: {{state.current_coordinates.longitude}}
+        </text>
+
+        <navigator url="../map_page/map_page">前往地图页</navigator>
+        <button bind:tap="pageJumpHandler">前往第二页</button> -->
+
+  </view>
+  
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

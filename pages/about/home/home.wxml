@@ -1,0 +1,43 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image class="image-radius" src="/images/test-photo.jpg" mode="widthFix"></image>
+    <view class="margin-top">
+      <text class="text-xxl text-grey text-df">测试用户</text>
+    </view>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">正常</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-safe"></text> 健康状况</view>
+    </view>
+    
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">正常</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-footprint"></text> 导航状况</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">充足</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-light"></text> 产品电量</view>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+        <text class="cuIcon-friendfavor"></text>
+        <text class="text-grey">关于我们</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

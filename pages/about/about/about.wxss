@@ -1,0 +1,4 @@
+/* pages/about/about/about.wxss */
+.tit {
+    text-align:center;
+}
