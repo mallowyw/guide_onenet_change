@@ -108,9 +108,9 @@ Page({
         const itemArr = wx.getStorageSync('items') || [];
         this.setData({ items: itemArr });
     },
-    pageJumpHandler(event) {
-        wx.navigateTo({
-            url: '../map_page/map_page',
-        });
-    }
+    // pageJumpHandler(event) {
+    //     wx.navigateTo({
+    //         url: '../map_page/map_page',
+    //     });
+    // }
 });

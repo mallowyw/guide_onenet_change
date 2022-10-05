@@ -3,5 +3,25 @@
     <view slot="content">导航</view>
 </cu-custom>
 <scroll-view scroll-y class="scrollPage">
-  <text>子女输入目的地</text>
+  <view class="container">
+    <view wx:if="{{address ==''}}">
+      <button bindtap='getLocation'>选择目的地</button>
+    </view>
+
+    <view wx:if="{{address !=''}}">
+      <button bindtap='getLocation'>更换目的地</button>
+    </view>
+    <view wx:if="{{address !=''}}" class="details">
+      <view>位置名称:{{name}}</view>
+      <view>详细地址:{{address}}</view>
+    </view>
+  </view>
+  <view wx:if="{{address !=''}}" style="width: 100%; height: 40%;margin-top: 2%;">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" style="width: 100%; height: 100%;"></map>
+  </view>
+
+  <view wx:if="{{address !=''}}" class="confirm">
+    <button bindtap='OneNet_Post'>确认目的地</button>
+  </view>
+
 </scroll-view>

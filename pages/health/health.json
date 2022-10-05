@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "component": true,
+  "usingComponents": {
+      "ec-canvas": "/ec-canvas/ec-canvas"
+  },
+  "disableScroll": true
 }
