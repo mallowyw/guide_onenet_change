@@ -30,9 +30,10 @@ Page({
     })
   },
   OneNet_Post:function(){
+    console.log("11111:" + this.data.name)
     let data={
       "datastreams": [
-        {"name": "name", "address": "address", "latitude": "latitude", "longitude": "longitude" },
+        {"data": this.data},
       ]
     }
     wx.request({
